@@ -1,0 +1,25 @@
+# File Paths
+video_source: "videos/highway_test.mp4"
+output_path: "logs/output_traffic.mp4"
+log_path: "logs/violations.csv"
+
+# YOLO configurations
+model_path: "runs/detect/traffic_model/custom_yolo/weights/best.pt"
+confidence_threshold: 0.40
+speed_limit_kmh: 40.0
+
+# Target vehicle classes from your trained data
+# Assuming classes: 0:auto, 1:bicycle, 2:bus, 3:car, 4:motorcycle, 5:tempo, 6:tractor, 7:truck
+target_classes: [0, 2, 3, 4, 5, 7] 
+
+# Perspective Transformation Coordinates
+# source_polygon maps a 4-point region of the road in the video (x, y pixels)
+source_polygon:
+  - [320, 450] # Bottom-Left
+  - [960, 450] # Bottom-Right
+  - [1280, 720] # Top-Right
+  - [0, 720]   # Top-Left
+
+# Real-world dimensions of the polygon road section (in meters)
+real_world_width: 12.0  # e.g., Width of the lanes being monitored
+real_world_height: 30.0 # e.g., Length of the road segment

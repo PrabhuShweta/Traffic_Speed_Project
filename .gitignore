@@ -1,0 +1,25 @@
+# --- Python Virtual Environment ---
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Ultralytics YOLO & Training Runs ---
+runs/
+# (Optional: If you want to keep logs/ code structure but ignore exported run data)
+logs/*.csv
+logs/*.mp4
+
+# --- Dataset Archives & Large Media Files ---
+dataset/
+videos/*.mp4
+videos/*.avi
+videos/*.mov
+
+# --- Operating System & Editor Specifics ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
